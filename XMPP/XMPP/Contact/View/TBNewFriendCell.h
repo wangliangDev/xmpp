@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TBNewFriendCell : UITableViewCell
+@interface TBNewFriendCell : UITableViewCell{
+    
+    
+}
 
 @end

@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TBContactCell : UITableViewCell
+@class TBContactModel;
+
+@interface TBContactCell : UITableViewCell{
+    
+    
+    
+}
+
+
 
 @end
