@@ -12,6 +12,7 @@
 		180E83891E1F4B5700AB049B /* TBRegisterHeadImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E83881E1F4B5700AB049B /* TBRegisterHeadImageController.m */; };
 		180E838C1E1F932F00AB049B /* TBContactModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E838B1E1F932F00AB049B /* TBContactModel.m */; };
 		180E838F1E1FA95F00AB049B /* TBNewFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E838E1E1FA95F00AB049B /* TBNewFriendCell.m */; };
+		180E83921E1FA98600AB049B /* TBContactCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E83911E1FA98600AB049B /* TBContactCell.m */; };
 		181D694F1E1C91A2006837EF /* DXPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 181D69481E1C91A2006837EF /* DXPopover.m */; };
 		181D69501E1C91A2006837EF /* popTableview.m in Sources */ = {isa = PBXBuildFile; fileRef = 181D694A1E1C91A2006837EF /* popTableview.m */; };
 		181D69511E1C91A2006837EF /* fileCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 181D694C1E1C91A2006837EF /* fileCacheManager.m */; };
@@ -178,6 +179,8 @@
 		180E838B1E1F932F00AB049B /* TBContactModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBContactModel.m; sourceTree = "<group>"; };
 		180E838D1E1FA95F00AB049B /* TBNewFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBNewFriendCell.h; sourceTree = "<group>"; };
 		180E838E1E1FA95F00AB049B /* TBNewFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBNewFriendCell.m; sourceTree = "<group>"; };
+		180E83901E1FA98600AB049B /* TBContactCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBContactCell.h; sourceTree = "<group>"; };
+		180E83911E1FA98600AB049B /* TBContactCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBContactCell.m; sourceTree = "<group>"; };
 		181D69471E1C91A2006837EF /* DXPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXPopover.h; sourceTree = "<group>"; };
 		181D69481E1C91A2006837EF /* DXPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXPopover.m; sourceTree = "<group>"; };
 		181D69491E1C91A2006837EF /* popTableview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = popTableview.h; sourceTree = "<group>"; };
@@ -641,6 +644,8 @@
 			children = (
 				180E838D1E1FA95F00AB049B /* TBNewFriendCell.h */,
 				180E838E1E1FA95F00AB049B /* TBNewFriendCell.m */,
+				180E83901E1FA98600AB049B /* TBContactCell.h */,
+				180E83911E1FA98600AB049B /* TBContactCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1678,6 +1683,7 @@
 				181D6B301E1CFE80006837EF /* XMPPTime.m in Sources */,
 				189DCE021E1B566C006974A4 /* ViewController.m in Sources */,
 				181D6B231E1CFE80006837EF /* XMPPMessageArchiving.xcdatamodeld in Sources */,
+				180E83921E1FA98600AB049B /* TBContactCell.m in Sources */,
 				181D6B491E1CFE81006837EF /* DDXMLElement.m in Sources */,
 				181D6AE71E1CFE80006837EF /* XMPPGroupCoreDataStorageObject.m in Sources */,
 				181D6B1D1E1CFE80006837EF /* NSString+XEP_0106.m in Sources */,
