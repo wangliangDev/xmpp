@@ -1,0 +1,14 @@
+{
+  "stickers" : [
+    {
+      "filename" : "闭嘴.sticker"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  },
+  "properties" : {
+    "grid-size" : "small"
+  }
+}
