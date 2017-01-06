@@ -39,10 +39,6 @@
     [self.view addSubview:self.contactsList];
     
     
-    
-    
-    
-    
 }
 -(void)viewWillAppear:(BOOL)animated{
     
@@ -355,10 +351,7 @@
         
        
         
-        
-        
-        
-        
+
         
         
         
