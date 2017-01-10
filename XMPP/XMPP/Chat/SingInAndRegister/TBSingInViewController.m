@@ -106,6 +106,10 @@
     [_passWord resignFirstResponder];
     [_userName resignFirstResponder];
     
+  
+    
+
+    
 }
 
 -(void)pushRegisterVC
@@ -211,7 +215,8 @@
         
         UIView *leftView = [[UIView alloc]initWithFrame:CGRectMake(0,0,40,40)];
         
-        UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 30 ,30)];        imageView.image = [UIImage imageNamed:@"密码.png"];
+        UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 30 ,30)];
+        imageView.image = [UIImage imageNamed:@"密码.png"];
         
         [leftView addSubview:imageView];
         

@@ -8,6 +8,9 @@
 
 #import "TBContactViewController.h"
 #import "TBContactModel.h"
+#import "TBNewFriendCell.h"
+#import "TBContactCell.h"
+#import "TBAddContactController.h"
 
 @interface TBContactViewController ()<UITableViewDelegate,UITableViewDataSource,XMPPRosterDelegate,XMPPvCardAvatarDelegate,XMPPvCardTempModuleDelegate>{
     
@@ -44,7 +47,7 @@
     
     [super viewWillAppear:animated];
     //修改状态栏显示状态
-    [[UIApplication sharedApplication]setStatusBarHidden:NO];
+  
     
     [self reloaList];
 }
@@ -105,7 +108,10 @@
     
     self.contactsPinyinDic = [NSMutableDictionary new];
     
-    for (TBContactModel *model in self.user.contactsArray) {
+    NSArray *contatArr = self.user.contactsArray;
+    
+    
+    for (TBContactModel *model in contatArr) {
         
         NSString * firstWord = [[Singletion shareInstance]transform:model.vCard.nickname];
         
@@ -136,8 +142,10 @@
         {
             if (self.indexArray[j] > self.indexArray[i]) {
                 
-                self.indexArray[j] = self.indexArray[i];
-                self.indexArray[i] = self.indexArray[j];
+                
+                NSString *objString = self.indexArray[j];
+                self.indexArray[j] =  self.indexArray[i];
+                self.indexArray[i] = objString;
             }
             
         }
@@ -342,19 +350,44 @@
     
 }
 
+-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0) {
+        
+        TBNewFriendCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NewFriendCell" forIndexPath:indexPath];
+        
+        
+        return cell;
+        
+    }else{
+        
+        
+        TBContactCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactCell" forIndexPath:indexPath];
+        
+        NSMutableArray *sectionArray =self.contactsPinyinDic[self.indexArray[indexPath.section]];
+        TBContactModel *model = [sectionArray objectAtIndex:indexPath.row];
+        
+        cell.contactModel = model;
+        
+        return cell;
+    }
+}
+
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (indexPath.section == 0) {
        
+        TBAddContactController *addContactVC = [[TBAddContactController alloc]init];
+        [addContactVC setHidesBottomBarWhenPushed:YES];
+        [self.navigationController pushViewController:addContactVC animated:YES];
+
         
     }else{
         
        
         
 
-        
-        
-        
     }
     
     
@@ -447,6 +480,8 @@
         _contactsList.separatorStyle = NO;
         
         _contactsList.sectionIndexBackgroundColor = [UIColor clearColor];
+        [_contactsList registerClass:[TBContactCell class] forCellReuseIdentifier:@"ContactCell"];
+        [_contactsList registerClass:[TBNewFriendCell class] forCellReuseIdentifier:@"NewFriendCell"];
         
         self.automaticallyAdjustsScrollViewInsets = NO;
         

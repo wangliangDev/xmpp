@@ -16,6 +16,6 @@
     
 }
 
-
+@property(nonatomic,strong)TBContactModel *contactModel;
 
 @end

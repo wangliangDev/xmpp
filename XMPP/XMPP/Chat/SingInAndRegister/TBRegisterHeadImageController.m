@@ -113,7 +113,7 @@
     
     [[TBXmppManager defaultManage].vCardTempModule updateMyvCardTemp:vCard];
     
-     [self dismissViewControllerAnimated:YES completion:nil];
+     [self.navigationController popViewControllerAnimated:YES];
    
 
 }

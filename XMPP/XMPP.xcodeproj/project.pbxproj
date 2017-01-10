@@ -157,6 +157,8 @@
 		181D6B4C1E1CFE81006837EF /* libidn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 181D6ACC1E1CFE80006837EF /* libidn.a */; };
 		181D6B4E1E1CFF3F006837EF /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 181D6B4D1E1CFF3F006837EF /* libxml2.tbd */; };
 		181D6B501E1D002E006837EF /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 181D6B4F1E1D002E006837EF /* libresolv.tbd */; };
+		1821C7AF1E23647100D18789 /* SDAddContactCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1821C7AD1E23647100D18789 /* SDAddContactCell.m */; };
+		18308C091E23489A000DF47B /* TBAddContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18308C081E23489A000DF47B /* TBAddContactController.m */; };
 		1870E0721E1E45BD001B1AFC /* TBXmppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1870E0711E1E45BD001B1AFC /* TBXmppManager.m */; };
 		189DCDFC1E1B566C006974A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 189DCDFB1E1B566C006974A4 /* main.m */; };
 		189DCDFF1E1B566C006974A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 189DCDFE1E1B566C006974A4 /* AppDelegate.m */; };
@@ -476,6 +478,10 @@
 		181D6ACF1E1CFE80006837EF /* XMPPFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPPFramework.h; sourceTree = "<group>"; };
 		181D6B4D1E1CFF3F006837EF /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		181D6B4F1E1D002E006837EF /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		1821C7AD1E23647100D18789 /* SDAddContactCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDAddContactCell.m; sourceTree = "<group>"; };
+		1821C7AE1E23647100D18789 /* SDAddContactCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDAddContactCell.h; sourceTree = "<group>"; };
+		18308C071E23489A000DF47B /* TBAddContactController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBAddContactController.h; sourceTree = "<group>"; };
+		18308C081E23489A000DF47B /* TBAddContactController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBAddContactController.m; sourceTree = "<group>"; };
 		1870E0701E1E45BD001B1AFC /* TBXmppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBXmppManager.h; sourceTree = "<group>"; };
 		1870E0711E1E45BD001B1AFC /* TBXmppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBXmppManager.m; sourceTree = "<group>"; };
 		188554D91E1BBAC30026F3FB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -626,6 +632,8 @@
 			children = (
 				181D69781E1C9E5A006837EF /* TBContactViewController.h */,
 				181D69791E1C9E5A006837EF /* TBContactViewController.m */,
+				18308C071E23489A000DF47B /* TBAddContactController.h */,
+				18308C081E23489A000DF47B /* TBAddContactController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -646,6 +654,8 @@
 				180E838E1E1FA95F00AB049B /* TBNewFriendCell.m */,
 				180E83901E1FA98600AB049B /* TBContactCell.h */,
 				180E83911E1FA98600AB049B /* TBContactCell.m */,
+				1821C7AD1E23647100D18789 /* SDAddContactCell.m */,
+				1821C7AE1E23647100D18789 /* SDAddContactCell.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1726,6 +1736,7 @@
 				181D6AE01E1CFE80006837EF /* XMPPPresence.m in Sources */,
 				181D6B2E1E1CFE80006837EF /* XMPPPing.m in Sources */,
 				181D69831E1C9EB3006837EF /* TBSingInViewController.m in Sources */,
+				1821C7AF1E23647100D18789 /* SDAddContactCell.m in Sources */,
 				181D69511E1C91A2006837EF /* fileCacheManager.m in Sources */,
 				181D6AE31E1CFE80006837EF /* XMPPCoreDataStorage.m in Sources */,
 				181D6B451E1CFE81006837EF /* DispatchQueueLogFormatter.m in Sources */,
@@ -1744,6 +1755,7 @@
 				181D697D1E1C9E6B006837EF /* TBDisconverViewController.m in Sources */,
 				181D6B3C1E1CFE81006837EF /* XMPPSRVResolver.m in Sources */,
 				181D6B4A1E1CFE81006837EF /* DDXMLNode.m in Sources */,
+				18308C091E23489A000DF47B /* TBAddContactController.m in Sources */,
 				181D6AFD1E1CFE80006837EF /* XMPPRoomMessageHybridCoreDataStorageObject.m in Sources */,
 				181D6B351E1CFE80006837EF /* NSXMLElement+XEP_0297.m in Sources */,
 				181D6B431E1CFE81006837EF /* DDTTYLogger.m in Sources */,

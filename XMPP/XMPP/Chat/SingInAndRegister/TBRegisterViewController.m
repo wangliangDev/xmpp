@@ -125,6 +125,7 @@
         
         TBRegisterHeadImageController *registerHeadImage = [TBRegisterHeadImageController new];
         [registerHeadImage setHidesBottomBarWhenPushed:YES];
+        
         [weakSelf.navigationController pushViewController:registerHeadImage animated:YES];
         
     }];
