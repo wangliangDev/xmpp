@@ -62,22 +62,9 @@
 -(void)loadNavigationView{
     
     self.navigationItem.title = @"新的朋友";
-    self.navigationController.navigationBar.barTintColor = RGB(21, 21, 21);
-    [self.navigationController.navigationBar setTitleTextAttributes:
-     
-     @{NSFontAttributeName: [UIFont fontWithName:@"Helvetica-Bold" size:18],
-       
-       NSForegroundColorAttributeName:[UIColor whiteColor]}];
-    
-    
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(popVC)];
+   
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"添加好友" style:UIBarButtonItemStylePlain target:self action:@selector(addNewContact)];
-    
-    
-    [self.navigationItem.leftBarButtonItem setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"Helvetica-Bold" size:17],
-                                                                    
-                                                                    NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateNormal];
     
     
     [self.navigationItem.rightBarButtonItem setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"Helvetica-Bold" size:17],
@@ -86,12 +73,6 @@
     
     
 }
--(void)popVC{
-    
-    [self.navigationController popViewControllerAnimated:YES];
-    
-}
-
 
 
 - (void)XMPPAddFriendSubscribe:(NSString *)name

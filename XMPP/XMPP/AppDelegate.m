@@ -172,16 +172,16 @@
 
 
 //登录成功的方法.
-- (void)xmppStreamDidAuthenticate:(XMPPStream *)sender{
+//- (void)xmppStreamDidAuthenticate:(XMPPStream *)sender{
     
     
-    XMPPPresence *presence =  [XMPPPresence presenceWithType:@"available"];
+  //  XMPPPresence *presence =  [XMPPPresence presenceWithType:@"available"];
     
-    [[TBXmppManager defaultManage].stream sendElement:presence];
+   // [[TBXmppManager defaultManage].stream sendElement:presence];
     
-    [[TBXmppManager defaultManage].roster fetchRoster];
+   // [[TBXmppManager defaultManage].roster fetchRoster];
     
-}
+//}
 
 
 

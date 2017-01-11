@@ -20,5 +20,6 @@
 -(void)removeHudView;
 - (UIImage *)reSizeImage:(UIImage *)image toSize:(CGSize)reSize;
 -(NSString *)transform:(NSString *)chinese;
+-(CGFloat)textHight:(NSString *)string font:(UIFont*)font;
 
 @end

@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface TBChatViewController : UIViewController{
+
+@class TBContactModel;
+
+@interface TBChatViewController : BaseViewController{
     
     
 }
-
+@property(nonatomic,strong)TBContactModel *contactModel;
 @end

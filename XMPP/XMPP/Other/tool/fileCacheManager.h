@@ -14,6 +14,7 @@
     
 }
 
++(NSURL *)getAudioSavePath;
 /**
  *  把对象归档到沙盒cache路径下
  *

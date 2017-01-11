@@ -97,6 +97,13 @@
     return[scan scanFloat:&val] && [scan isAtEnd];
 }
 
+-(CGFloat)textHight:(NSString *)string font:(UIFont*)font
+{
+    
+    CGRect rect = [string boundingRectWithSize:CGSizeMake(KSCREEN_WIDTH/14*9, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil];
+    
+    return rect.size.width;
+}
 
 -(void)loadHudView:(UIView*)view
 {

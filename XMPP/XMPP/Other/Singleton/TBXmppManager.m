@@ -101,7 +101,7 @@
     
     NSError *error = nil;
     
-    [self.stream connectWithTimeout:30.0f error:&error];
+    [self.stream connectWithTimeout:60.0f error:&error];
     
     if (error) {
         

@@ -11,6 +11,7 @@
 #import "TBNewFriendCell.h"
 #import "TBContactCell.h"
 #import "TBAddContactController.h"
+#import "TBChatViewController.h"
 
 @interface TBContactViewController ()<UITableViewDelegate,UITableViewDataSource,XMPPRosterDelegate,XMPPvCardAvatarDelegate,XMPPvCardTempModuleDelegate>{
     
@@ -141,7 +142,6 @@
         for (int j = 0; j < i; j++)
         {
             if (self.indexArray[j] > self.indexArray[i]) {
-                
                 
                 NSString *objString = self.indexArray[j];
                 self.indexArray[j] =  self.indexArray[i];
@@ -385,8 +385,13 @@
         
     }else{
         
-       
+        TBChatViewController *chatViewController = [TBChatViewController new];
+        [chatViewController setHidesBottomBarWhenPushed:YES];
+         NSMutableArray *sectionArray =self.contactsPinyinDic[self.indexArray[indexPath.section]];
         
+        TBContactModel *model = [sectionArray objectAtIndex:indexPath.row];
+        chatViewController.contactModel = model;
+        [self.navigationController pushViewController:chatViewController animated:YES];
 
     }
     

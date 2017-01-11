@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
 
-@interface TBRegisterViewController : UIViewController
+@interface TBRegisterViewController : BaseViewController
 
 @end

@@ -61,6 +61,15 @@
     return filePath;
 }
 
+// 设置音频保存路径
++ (NSURL *)getAudioSavePath {
+    NSString *urlStr = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    urlStr = [urlStr stringByAppendingPathComponent:@"my.wav"];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    
+    return url;
+}
+
 
 +(void)saveUserDefaults:(id)object forKey:(NSString *)key
 {

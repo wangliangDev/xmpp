@@ -33,6 +33,8 @@
     [super viewDidLoad];
    
      self.view.backgroundColor = RGB(240, 240, 240);
+    self.navigationItem.title = @"注册会员";
+    self.navigationController.navigationBar.barTintColor = RGB(52, 147, 255);
     
     [[TBXmppManager defaultManage].stream addDelegate:self delegateQueue:dispatch_get_main_queue()];
     [[TBXmppManager defaultManage].vCardTempModule addDelegate:self delegateQueue:dispatch_get_main_queue()];
@@ -43,28 +45,7 @@
     [self.view addSubview:self.verifyPassWord];
     [self.view addSubview:self.registerButton];
     
-     [self loadNavigationView];
     
-}
--(void)loadNavigationView{
-    
-    self.navigationItem.title = @"注册会员";
-    self.navigationController.navigationBar.barTintColor = RGB(52, 147, 255);
-    [self.navigationController.navigationBar setTitleTextAttributes:
-     
-     @{NSFontAttributeName: [UIFont fontWithName:@"Helvetica-Bold" size:18],
-       
-       NSForegroundColorAttributeName:[UIColor whiteColor]}];
-    
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(popLoginVC)];
-    
-    [self.navigationItem.leftBarButtonItem setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"Helvetica-Bold" size:17],
-                                                                    
-                                                                    NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateNormal];
-    
-    [self.navigationItem.rightBarButtonItem setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"Helvetica-Bold" size:17],
-                                                                     
-                                                                     NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateNormal];
     
 }
 

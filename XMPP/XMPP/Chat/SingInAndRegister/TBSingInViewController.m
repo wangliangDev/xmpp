@@ -8,7 +8,7 @@
 
 #import "TBSingInViewController.h"
 #import "TBMyViewController.h"
-#import "TBChatViewController.h"
+#import "TBChatListController.h"
 #import "TBContactViewController.h"
 #import "TBDisconverViewController.h"
 #import "TTBBTabbarController.h"
@@ -21,7 +21,7 @@
     TBMyViewController *myVC;
     TBContactViewController *contactVC;
     TBDisconverViewController *disconverVC;
-    TBChatViewController *chatVC;
+    TBChatListController *chatListVC;
     TTBBTabbarController *tabbar;
     TBXmppManager *xmppManager;
     XMPPStream *stream;
@@ -56,8 +56,8 @@
 
 -(void)changeRootViewControl
 {
-    chatVC = [[TBChatViewController alloc]init];
-    UINavigationController *homeNav = [[UINavigationController alloc]initWithRootViewController:chatVC];
+    chatListVC = [[TBChatListController alloc]init];
+    UINavigationController *homeNav = [[UINavigationController alloc]initWithRootViewController:chatListVC];
     
     contactVC = [[TBContactViewController alloc]init];
     UINavigationController *discountNav = [[UINavigationController alloc]initWithRootViewController:contactVC];
@@ -131,6 +131,7 @@
     userInfoManager.jid = [XMPPJID jidWithUser:self.userName.text domain:kDomin resource:kResource];
     userInfoManager.password = self.passWord.text;
     [xmppManager.roster fetchRoster];
+   
     
     
     if (self.timer !=nil) {
