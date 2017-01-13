@@ -1999,7 +1999,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/XMPP/Other/XMPPFramework/Vendor/libidn",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = TTBB.XMPP;
+				PRODUCT_BUNDLE_IDENTIFIER = testlightxmpp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -2019,7 +2019,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/XMPP/Other/XMPPFramework/Vendor/libidn",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = TTBB.XMPP;
+				PRODUCT_BUNDLE_IDENTIFIER = testlightxmpp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

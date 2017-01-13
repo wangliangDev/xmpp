@@ -69,7 +69,7 @@
     
     [self.navigationItem.rightBarButtonItem setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"Helvetica-Bold" size:17],
                                                                      
-                                                                     NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateNormal];
+                                                                     NSForegroundColorAttributeName:[UIColor blackColor]} forState:UIControlStateNormal];
     
     
 }

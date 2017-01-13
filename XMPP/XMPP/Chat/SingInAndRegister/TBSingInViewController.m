@@ -103,12 +103,12 @@
    
     [xmppManager loginWithUserName:self.userName.text AndPassWord:self.passWord.text];
     
+    [[Singletion shareInstance]loadHudView:self.view];
+    
     [_passWord resignFirstResponder];
     [_userName resignFirstResponder];
     
-  
     
-
     
 }
 
@@ -144,7 +144,9 @@
         [self.rollTimer invalidate];
         self.rollTimer = nil;
     }
-
+  
+    [[Singletion shareInstance]removeHudView];
+    
     [self changeRootViewControl];
 }
 

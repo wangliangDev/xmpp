@@ -25,21 +25,21 @@
     self.navigationItem.leftBarButtonItem = self.leftBarButtonItem;
     self.view.backgroundColor = kWhiteColor;
     
-    self.navigationController.navigationBar.barTintColor = RGB(21, 21, 21);
+   
     
     [self.navigationController.navigationBar setTitleTextAttributes:
      
      @{NSFontAttributeName: [UIFont fontWithName:@"Helvetica-Bold" size:18],
        
-       NSForegroundColorAttributeName:[UIColor whiteColor]}];
+       NSForegroundColorAttributeName:[UIColor blackColor]}];
     
     
     [self.navigationItem.leftBarButtonItem setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"Helvetica-Bold" size:17],
-                                                                    NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateNormal];
+                                                                    NSForegroundColorAttributeName:[UIColor blackColor]} forState:UIControlStateNormal];
     
     [self.navigationItem.rightBarButtonItem setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"Helvetica-Bold" size:17],
                                                                      
-                                                                     NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateNormal];
+                                                                     NSForegroundColorAttributeName:[UIColor blackColor]} forState:UIControlStateNormal];
     
     
 }

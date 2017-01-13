@@ -207,7 +207,7 @@
     
     self.inPutView.sendButton.userInteractionEnabled  = NO;
 
-    
+  
 }
 
 #pragma mark ***XMPPStreamDelegate***
@@ -377,6 +377,40 @@
     return 1;
     
 }
+
+//headerView显示时间
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, KSCREEN_WIDTH, 35)];
+    
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 19, KSCREEN_WIDTH, 25)];
+    
+    label.textAlignment = NSTextAlignmentCenter;
+    
+    label.font = [UIFont systemFontOfSize:15];
+    
+    XMPPMessageArchiving_Message_CoreDataObject *message = self.chatDataArray[section];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    
+    [formatter setDateStyle:NSDateFormatterMediumStyle];
+    
+    [formatter setTimeStyle:NSDateFormatterShortStyle];
+    
+    [formatter setDateFormat:@"HH:mm"];
+    
+    NSString *dateTime = [formatter stringFromDate:message.timestamp];
+    
+    
+    label.text = dateTime;
+    
+    [view addSubview:label];
+    
+    return view;
+}
+
+
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     XMPPMessageArchiving_Message_CoreDataObject *message = [self.chatDataArray objectAtIndex:indexPath.section];
