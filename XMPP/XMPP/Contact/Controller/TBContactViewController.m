@@ -72,6 +72,8 @@
     
     //好友上下线
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(contactIsAvailable) name:ContactIsAvailable object:nil];
+     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloaList) name:@"addContactReload" object:nil];
+    
 }
 
 
@@ -93,7 +95,6 @@
     
     
 }
-
 
 -(void)reloaList{
     
@@ -200,7 +201,7 @@
     
 }
 
-//对方请求好友
+//对方好友列表
 -(void)xmppRoster:(XMPPRoster *)sender didReceiveRosterItem:(DDXMLElement *)item
 {
     
@@ -355,7 +356,6 @@
     if (indexPath.section == 0) {
         
         TBNewFriendCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NewFriendCell" forIndexPath:indexPath];
-        
         
         return cell;
         

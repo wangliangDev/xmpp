@@ -102,11 +102,13 @@
 
 -(void)reloadMessage{
     
-    NSManagedObjectContext *context = [TBXmppManager defaultManage].messageContext;
+     XMPPMessageArchivingCoreDataStorage *storage = [TBXmppManager defaultManage].messageArchivingCoreDataStoreage;
+    
+   
     
     NSFetchRequest *fetchRequest = [NSFetchRequest new];
     
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"XMPPMessageArchiving_Message_CoreDataObject" inManagedObjectContext:context];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:storage.messageEntityName inManagedObjectContext:storage.mainThreadManagedObjectContext];
     
     [fetchRequest setEntity:entity];
     
@@ -122,7 +124,7 @@
     
     NSError *error = nil;
     
-    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    NSArray *fetchedObjects = [storage.mainThreadManagedObjectContext executeFetchRequest:fetchRequest error:&error];
     
     [self.chatDataArray removeAllObjects];
     
@@ -195,7 +197,8 @@
 
     XMPPMessage *message = [XMPPMessage messageWithType:@"chat" to:self.contactModel.jid];
     [message addBody:self.inPutView.inputTextView.text];
-     NSXMLElement *receipt = [NSXMLElement elementWithName:@"request" xmlns:@"urn:xmpp:receipts"];
+    
+    NSXMLElement *receipt = [NSXMLElement elementWithName:@"request" xmlns:@"urn:xmpp:receipts"];
     [message addChild:receipt];
     
     [[TBXmppManager defaultManage].stream sendElement:message];
@@ -437,12 +440,22 @@
     model.message = message.body;
     if (message.isOutgoing) {
         
-          model.headerImage = [UserInfoManager shardManager].headerImage;
+        model.headerImage = [UIImage imageNamed:@"头像"];
         
     }else{
         
-         model.headerImage = [UIImage imageWithData:self.contactModel.vCard.photo];
+       
+        
+        if (self.contactModel.vCard.photo == nil) {
+            
+            model.headerImage = [UIImage imageNamed:@"头像"];
+            
+        }else{
+            
+              model.headerImage = [UIImage imageWithData:self.contactModel.vCard.photo];
+        }
     }
+    
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     
@@ -539,6 +552,15 @@
     return _audioRecorder;
 }
 
+-(NSMutableArray*)chatDataArray
+{
+    if (!_chatDataArray) {
+        
+        _chatDataArray = [NSMutableArray new];
+    }
+    
+    return _chatDataArray;
+}
 @end
 
 

@@ -23,9 +23,7 @@
     TBDisconverViewController *disconverVC;
     TBChatListController *chatListVC;
     TTBBTabbarController *tabbar;
-    TBXmppManager *xmppManager;
-    XMPPStream *stream;
-    UserInfoManager *userInfoManager;
+   
 
 }
 
@@ -42,16 +40,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    
-    xmppManager = [TBXmppManager defaultManage];
-    stream = xmppManager.stream;
-    userInfoManager = [UserInfoManager shardManager];
-    [xmppManager.stream addDelegate:self delegateQueue:dispatch_get_main_queue()];
+ 
     
     [self.frontRollView addSubview:self.logoImageView];
     [self.frontRollView addSubview:self.userName];
     [self.frontRollView addSubview:self.passWord];
     [self.frontRollView addSubview:self.loginButton];
     [self.frontRollView addSubview:self.registerButton];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(loginSuccessful) name:kloginSuccessful object:nil];
 }
 
 -(void)changeRootViewControl
@@ -96,21 +93,14 @@
     
 }
 
-#pragma mark --eventRespond
-
--(void)skipAppRootMainViewController{
-    
-   
-    [xmppManager loginWithUserName:self.userName.text AndPassWord:self.passWord.text];
+-(void)loginAction
+{
     
     [[Singletion shareInstance]loadHudView:self.view];
     
-    [_passWord resignFirstResponder];
-    [_userName resignFirstResponder];
-    
-    
-    
+    [[TBXmppManager defaultManage]loginWithUserName:self.userName.text AndPassWord:self.passWord.text];
 }
+
 
 -(void)pushRegisterVC
 {
@@ -120,19 +110,8 @@
     [self presentViewController:registerNC animated:YES completion:nil];
 }
 
-#pragma mark --XMPPStreamDelegate
-
--(void)xmppStreamDidAuthenticate:(XMPPStream *)sender
+-(void)loginSuccessful
 {
-    
-    XMPPPresence *presence = [XMPPPresence presenceWithType:@"available"];
-    
-    [stream sendElement:presence];
-    userInfoManager.jid = [XMPPJID jidWithUser:self.userName.text domain:kDomin resource:kResource];
-    userInfoManager.password = self.passWord.text;
-    [xmppManager.roster fetchRoster];
-   
-    
     
     if (self.timer !=nil) {
         
@@ -144,17 +123,12 @@
         [self.rollTimer invalidate];
         self.rollTimer = nil;
     }
-  
+    
     [[Singletion shareInstance]removeHudView];
     
     [self changeRootViewControl];
 }
 
--(void)xmppStream:(XMPPStream *)sender didNotAuthenticate:(DDXMLElement *)error
-{
-    
-    [[TKAlertCenter defaultCenter]postAlertWithMessage:@"登录失败,请检查账号密码"];
-}
 
 
 #pragma mark --getter
@@ -212,7 +186,7 @@
 -(UITextField *)passWord{
     
     if (nil == _passWord) {
-        _passWord = [[UITextField alloc]initWithFrame:CGRectMake(KSCREEN_WIDTH/2-150, 260, 300, 40)];
+        _passWord = [[UITextField alloc]initWithFrame:CGRectMake(KSCREEN_WIDTH/2-150, CGRectGetMaxY(self.userName.frame)+1, 300, 40)];
         
         _passWord.backgroundColor = [UIColor whiteColor];
         
@@ -254,7 +228,7 @@
         _loginButton.backgroundColor = [UIColor orangeColor];
         _loginButton.layer.cornerRadius = 4;
         _loginButton.layer.masksToBounds = YES;
-        [_loginButton addTarget:self action:@selector(skipAppRootMainViewController) forControlEvents:UIControlEventTouchUpInside];
+        [_loginButton addTarget:self action:@selector(loginAction) forControlEvents:UIControlEventTouchUpInside];
         
     }
     

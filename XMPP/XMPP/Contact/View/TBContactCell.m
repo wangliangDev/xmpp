@@ -106,6 +106,7 @@
         self.iconsImageView.image = [UIImage imageWithData:contactModel.vCard.photo];
     }
     
+    NSLog(@"contactModel.vCard.nickname **%@",contactModel.vCard.nickname);
     
     self.contactNameLabel.text = contactModel.vCard.nickname;
     

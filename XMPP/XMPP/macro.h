@@ -64,6 +64,8 @@
 //好友上下线状态的更改通知
 #define ContactIsAvailable @"ContactIsAvailable"
 
+#define KXMPPRosterChange @"RosterChange"
+
 
 
 
@@ -73,5 +75,7 @@
 #define DisagreeAddNewContect @"DisagreeAddNewContect"
 //收到同意接受好友请求
 #define AgreeAddNewContect  @"AgreeAddNewContect"
+
+#define kloginSuccessful  @"loginSuccessful"
 
 #endif /* macro_h */

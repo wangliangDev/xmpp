@@ -60,7 +60,7 @@
     if (contentModel.isSend) {//本人
         
         self.headImageView.frame = CGRectMake(KSCREEN_WIDTH - 50, 20, 40, 40);
-        self.backView.frame = CGRectMake(KSCREEN_WIDTH - 50 - rect.size.width - 20, 15, rect.size.width + 20, rect.size.height+25);
+        self.backView.frame = CGRectMake(KSCREEN_WIDTH - 50 - rect.size.width - 20, 15, rect.size.width + 20, rect.size.height+20);
         image = [UIImage imageNamed:@"发送气泡"];
         headImage = contentModel.headerImage;
         
@@ -71,6 +71,8 @@
          image = [UIImage imageNamed:@"收到气泡"];
          headImage = contentModel.headerImage;
     }
+   
+   
     image = [image stretchableImageWithLeftCapWidth:image.size.width/10*9 topCapHeight:image.size.height/10*9];
     self.backView.image = image;
     self.headImageView.image = headImage;

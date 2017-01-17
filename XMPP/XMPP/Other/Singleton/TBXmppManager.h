@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "XMPPFramework.h"
 #import "XMPPvCardTemp.h"
+#import "XMPPAutoPing.h"
+
 
 
 typedef NS_ENUM(NSInteger,ConnetType) {
@@ -39,6 +41,7 @@ typedef NS_ENUM(NSInteger,ConnetType) {
 @property(nonatomic,strong)XMPPRoster *roster;
 @property(nonatomic,strong)XMPPRosterCoreDataStorage *rosterCoreDataStorage;
 
+
 /**
  电子名片相关
  */
@@ -59,6 +62,8 @@ typedef NS_ENUM(NSInteger,ConnetType) {
 @property(nonatomic,strong)XMPPMessageArchiving *messageArchiving;
 @property(nonatomic,strong)NSManagedObjectContext *messageContext;
 
+@property (nonatomic, strong) XMPPAutoPing *xmppAutoPing;
+@property (nonatomic, strong) XMPPPresence *receivePresence;
 
 /**
  登录服务器

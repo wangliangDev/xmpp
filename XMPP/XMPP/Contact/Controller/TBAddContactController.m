@@ -185,6 +185,7 @@
     
     [self hiddenAddFirendList];
     
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"addContactReload" object:nil];
     
 }
 
