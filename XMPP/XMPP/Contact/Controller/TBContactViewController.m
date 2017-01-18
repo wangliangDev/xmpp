@@ -378,9 +378,17 @@
     
     if (indexPath.section == 0) {
        
-        TBAddContactController *addContactVC = [[TBAddContactController alloc]init];
-        [addContactVC setHidesBottomBarWhenPushed:YES];
-        [self.navigationController pushViewController:addContactVC animated:YES];
+//        TBAddContactController *addContactVC = [[TBAddContactController alloc]init];
+//        [addContactVC setHidesBottomBarWhenPushed:YES];
+//        [self.navigationController pushViewController:addContactVC animated:YES];
+        
+        TBChatViewController *chatViewController = [TBChatViewController new];
+        [chatViewController setHidesBottomBarWhenPushed:YES];
+        NSMutableArray *sectionArray =self.contactsPinyinDic[self.indexArray[indexPath.section]];
+        
+        TBContactModel *model = [sectionArray objectAtIndex:indexPath.row];
+        chatViewController.contactModel = model;
+        [self.navigationController pushViewController:chatViewController animated:YES];
 
         
     }else{

@@ -15,6 +15,7 @@ PODS:
   - SDWebImage (4.0.0-beta2):
     - SDWebImage/Core (= 4.0.0-beta2)
   - SDWebImage/Core (4.0.0-beta2)
+  - SMPageControl (1.2)
 
 DEPENDENCIES:
   - CocoaAsyncSocket (~> 7.4.1)
@@ -23,6 +24,7 @@ DEPENDENCIES:
   - Masonry (~> 1.0.2)
   - MBProgressHUD (~> 1.0.0)
   - SDWebImage (~> 4.0.0-beta2)
+  - SMPageControl (~> 1.2)
 
 SPEC CHECKSUMS:
   CocoaAsyncSocket: a18c75dca4b08723628a0bacca6e94803d90be91
@@ -31,7 +33,8 @@ SPEC CHECKSUMS:
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   SDWebImage: e379f33106cf8d6766f970c0ef1c3fb609c94d78
+  SMPageControl: 922892813001cfaf059e86e6801f46a967e9ee29
 
-PODFILE CHECKSUM: f79c10ec1bae75a2bbc3db0ad17b5b54cdf3ad1d
+PODFILE CHECKSUM: 72211e28c18cc760f03961085a892b61e686244d
 
 COCOAPODS: 1.1.1

@@ -39,10 +39,20 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SMPageControl.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>251BAD17812F7EBF6532EACF66F941C3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3BD0DADA6A598C006991C1B5BDA4E70A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,12 +67,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7B669088CCA89E6CE9CF339DD41B8682</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CE2DBDF3D7FB5EEF3FC46F58D39A30FF</key>
+		<key>7EBA2BCB596345E7E9761EA2988F7777</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -73,6 +78,11 @@
 			<true/>
 		</dict>
 		<key>DC3688684BF42A20A8998F31DDA51A49</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EFADBEA286E20657630067C5FA88BBA6</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -16,6 +16,7 @@
 #import "TBRegisterViewController.h"
 
 
+
 @interface TBSingInViewController ()<UITextFieldDelegate,XMPPStreamDelegate>{
     
     TBMyViewController *myVC;
@@ -95,10 +96,11 @@
 
 -(void)loginAction
 {
+     [self changeRootViewControl];
     
-    [[Singletion shareInstance]loadHudView:self.view];
-    
-    [[TBXmppManager defaultManage]loginWithUserName:self.userName.text AndPassWord:self.passWord.text];
+//    [[Singletion shareInstance]loadHudView:self.view];
+//    
+//    [[TBXmppManager defaultManage]loginWithUserName:self.userName.text AndPassWord:self.passWord.text];
 }
 
 

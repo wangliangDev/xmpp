@@ -14,6 +14,7 @@ target ‘XMPP’ do
   pod 'CocoaAsyncSocket', '~> 7.4.1'
   pod 'Masonry', '~> 1.0.2'
   pod 'SDWebImage', '~> 4.0.0-beta2'
+  pod 'SMPageControl', '~> 1.2'
 #  pod 'XMPPFramework', :git => "https://github.com/robbiehanson/XMPPFramework.git", :branch => 'master'
 
  

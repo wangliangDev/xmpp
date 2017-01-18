@@ -20,6 +20,7 @@
 #import "UserInfoManager.h"
 #import "TKAlertCenter.h"
 #import "Singletion.h"
+#import "Define.h"
 
 
 

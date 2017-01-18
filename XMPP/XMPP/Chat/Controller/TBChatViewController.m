@@ -15,7 +15,7 @@
 #import "fileCacheManager.h"
 #import "TranscribeVoiceView.h"
 
-@interface TBChatViewController ()<UITableViewDelegate,UITableViewDataSource,UITextViewDelegate,XMPPStreamDelegate,AVAudioRecorderDelegate,AVAudioPlayerDelegate,TBChatDelegate>{
+@interface TBChatViewController ()<UITableViewDelegate,UITableViewDataSource,UITextViewDelegate,XMPPStreamDelegate,AVAudioRecorderDelegate,AVAudioPlayerDelegate,TBChatDelegate,TBInputViewDelegate>{
     
     
 }
@@ -91,10 +91,7 @@
 -(void)setKeyboardHide{
     
     
-    if ([self.inPutView.inputTextView isFirstResponder]) {
-        
-        [self.inPutView.inputTextView resignFirstResponder];
-    }
+  //  [self.inPutView tapAction];
 }
 
 
@@ -104,7 +101,7 @@
     
      XMPPMessageArchivingCoreDataStorage *storage = [TBXmppManager defaultManage].messageArchivingCoreDataStoreage;
     
-   
+
     
     NSFetchRequest *fetchRequest = [NSFetchRequest new];
     
@@ -187,28 +184,16 @@
       [message addChild:receipt];
       NSString *base64str = [data base64EncodedStringWithOptions:0];
       XMPPElement *attachment = [XMPPElement elementWithName:@"attachment" stringValue:base64str];
+      [message addChild:attachment];
     
-     [message addChild:attachment];
+    
      [[TBXmppManager defaultManage].stream sendElement:message];
 
 }
 
 -(void)sendMessage{
 
-    XMPPMessage *message = [XMPPMessage messageWithType:@"chat" to:self.contactModel.jid];
-    [message addBody:self.inPutView.inputTextView.text];
-    
-    NSXMLElement *receipt = [NSXMLElement elementWithName:@"request" xmlns:@"urn:xmpp:receipts"];
-    [message addChild:receipt];
-    
-    [[TBXmppManager defaultManage].stream sendElement:message];
-    
-    //输入框内容设置为空,并且关闭发送按钮的用户交互.
-    self.inPutView.inputTextView.text = @"";
-    
-    self.inPutView.sendButton.backgroundColor = RGB(126, 126, 126);
-    
-    self.inPutView.sendButton.userInteractionEnabled  = NO;
+   
 
   
 }
@@ -291,27 +276,37 @@
 #pragma mark ---键盘相关---
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
     
+    if(![textView hasText] && [text isEqualToString:@""]) {
+        return NO;
+    }
+    
+    if ([text isEqualToString:@"\n"]) {
+        
+        [textView resignFirstResponder];
+        
+        XMPPMessage *message = [XMPPMessage messageWithType:@"chat" to:self.contactModel.jid];
+        [message addBody:self.inPutView.inputTextView.text];
+        
+        NSXMLElement *receipt = [NSXMLElement elementWithName:@"request" xmlns:@"urn:xmpp:receipts"];
+        [message addChild:receipt];
+        
+        [[TBXmppManager defaultManage].stream sendElement:message];
+        
+        //输入框内容设置为空,并且关闭发送按钮的用户交互.
+        self.inPutView.inputTextView.text = @"";
+        
+        return NO;
+    }
     
     return YES;
+    
     
 }
 
 //监控输入框的内容是否为空,如果为空,则不能点击按钮
 - (void)textViewDidChange:(UITextView *)textView{
     
-    if (textView.text.length != 0 ||![textView.text isEqualToString: @""]) {
-        
-        self.inPutView.sendButton.backgroundColor = [UIColor orangeColor];
-        
-        self.inPutView.sendButton.userInteractionEnabled  = YES;
-    }else{
-        
-        self.inPutView.sendButton.backgroundColor = RGB(126, 126, 126);
-        
-        self.inPutView.sendButton.userInteractionEnabled  = NO;
-        
-        
-    }
+   
 }
 
 
@@ -331,32 +326,16 @@
     
 }
 
-// 监听键盘弹出
-- (void)keyBoardShow:(NSNotification *)noti
+-(void)keyBoardView:(TBInPutView *)keyBoard ChangeHeight:(CGFloat)height
 {
     
-    CGRect rec = [noti.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
-    // 小于，说明覆盖了输入框
-    if ([UIScreen mainScreen].bounds.size.height - rec.size.height < self.inPutView.frame.origin.y + self.inPutView.frame.size.height)
-    {
-        // 把我们整体的View往上移动
-        CGRect tempRec = self.view.frame;
-        tempRec.origin.y = - (rec.size.height);
-        self.view.frame = tempRec;
-    }
-    // 由于可见的界面缩小了，TableView也要跟着变化Frame
-    self.chatTable.frame = CGRectMake(0,rec.size.height+64 , KSCREEN_WIDTH, KSCREEN_HEIGHT -64- rec.size.height - self.inPutView.frame.size.height);
-    
+    self.chatTable.frame = CGRectMake(0, 64, kScreenWidth, height-10-50);
     
 }
 
 
-// 监听键盘隐藏
-- (void)keyboardHide:(NSNotification *)noti
-{
-    self.view.frame = CGRectMake(0, 0, KSCREEN_WIDTH, KSCREEN_HEIGHT);
-    self.chatTable.frame = CGRectMake(0, 64, KSCREEN_WIDTH, KSCREEN_HEIGHT - 64 - self.inPutView.frame.size.height);
-}
+
+
 
 
 -(void)dealloc{
@@ -485,13 +464,11 @@
 {
     if (!_inPutView) {
         
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardShow:) name:UIKeyboardWillShowNotification object:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardHide:) name:UIKeyboardWillHideNotification object:nil];
-        
         _inPutView = [[TBInPutView alloc]initWithFrame:CGRectMake(0, KSCREEN_HEIGHT-50, KSCREEN_WIDTH, 50)];
         _inPutView.inputTextView.delegate = self;
+        _inPutView.delegate = self;
         
-        [_inPutView.sendButton addTarget:self action:@selector(sendMessage) forControlEvents:UIControlEventTouchUpInside];
+     //   [_inPutView.moreButton addTarget:self action:@selector(moreAction) forControlEvents:UIControlEventTouchUpInside];
         
         [_inPutView.sendSoundButton addTarget:self action:@selector(transcribeVoiceAcrion) forControlEvents:UIControlEventTouchDown];
         

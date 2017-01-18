@@ -171,6 +171,20 @@
 		18A39A091E24D26900D95012 /* TBChatListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A39A081E24D26900D95012 /* TBChatListController.m */; };
 		18A39A0C1E24E90300D95012 /* TBChatContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A39A0B1E24E90300D95012 /* TBChatContentModel.m */; };
 		18A39A0F1E24EBDD00D95012 /* TBChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A39A0E1E24EBDD00D95012 /* TBChatCell.m */; };
+		18B52F2A1E2DE9D30030EACF /* TBChatKeyBoardAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B52F291E2DE9D30030EACF /* TBChatKeyBoardAnimationView.m */; };
+		18B52F361E2E1A4C0030EACF /* ChatEmojiIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B52F2D1E2E1A4C0030EACF /* ChatEmojiIcons.m */; };
+		18B52F371E2E1A4C0030EACF /* CommentEmoji.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B52F2F1E2E1A4C0030EACF /* CommentEmoji.m */; };
+		18B52F381E2E1A4C0030EACF /* EmojiConvertToString.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B52F311E2E1A4C0030EACF /* EmojiConvertToString.m */; };
+		18B52F391E2E1A4C0030EACF /* EmojiObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B52F331E2E1A4C0030EACF /* EmojiObj.m */; };
+		18B52F3A1E2E1A4C0030EACF /* EmojiTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B52F351E2E1A4C0030EACF /* EmojiTextAttachment.m */; };
+		18B52F441E2E1A530030EACF /* ChatEmojiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B52F3D1E2E1A530030EACF /* ChatEmojiView.m */; };
+		18B52F451E2E1A530030EACF /* EmojiButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B52F3F1E2E1A530030EACF /* EmojiButton.m */; };
+		18B52F461E2E1A530030EACF /* EmojiScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B52F411E2E1A530030EACF /* EmojiScrollView.m */; };
+		18B52F471E2E1A530030EACF /* IconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B52F431E2E1A530030EACF /* IconButton.m */; };
+		18B52F4E1E2E1B040030EACF /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B52F4B1E2E1B040030EACF /* UIImage+Category.m */; };
+		18B52F4F1E2E1B040030EACF /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B52F4D1E2E1B040030EACF /* UIView+Category.m */; };
+		18B52F521E2E1BEC0030EACF /* ChatInputTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B52F511E2E1BEC0030EACF /* ChatInputTextView.m */; };
+		18B52F541E2E1C2E0030EACF /* Emoji.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18B52F531E2E1C2E0030EACF /* Emoji.plist */; };
 		18E674BF1E25DD6600D05922 /* TranscribeVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E674BD1E25DD6600D05922 /* TranscribeVoiceView.m */; };
 		E5F79308C462C804D6AB8C2D /* Pods_XMPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4469743B040BA977EB93533 /* Pods_XMPP.framework */; };
 /* End PBXBuildFile section */
@@ -511,6 +525,34 @@
 		18A39A0B1E24E90300D95012 /* TBChatContentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBChatContentModel.m; sourceTree = "<group>"; };
 		18A39A0D1E24EBDD00D95012 /* TBChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBChatCell.h; sourceTree = "<group>"; };
 		18A39A0E1E24EBDD00D95012 /* TBChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBChatCell.m; sourceTree = "<group>"; };
+		18B52F281E2DE9D30030EACF /* TBChatKeyBoardAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBChatKeyBoardAnimationView.h; sourceTree = "<group>"; };
+		18B52F291E2DE9D30030EACF /* TBChatKeyBoardAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBChatKeyBoardAnimationView.m; sourceTree = "<group>"; };
+		18B52F2C1E2E1A4C0030EACF /* ChatEmojiIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatEmojiIcons.h; sourceTree = "<group>"; };
+		18B52F2D1E2E1A4C0030EACF /* ChatEmojiIcons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatEmojiIcons.m; sourceTree = "<group>"; };
+		18B52F2E1E2E1A4C0030EACF /* CommentEmoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentEmoji.h; sourceTree = "<group>"; };
+		18B52F2F1E2E1A4C0030EACF /* CommentEmoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentEmoji.m; sourceTree = "<group>"; };
+		18B52F301E2E1A4C0030EACF /* EmojiConvertToString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiConvertToString.h; sourceTree = "<group>"; };
+		18B52F311E2E1A4C0030EACF /* EmojiConvertToString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojiConvertToString.m; sourceTree = "<group>"; };
+		18B52F321E2E1A4C0030EACF /* EmojiObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiObj.h; sourceTree = "<group>"; };
+		18B52F331E2E1A4C0030EACF /* EmojiObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojiObj.m; sourceTree = "<group>"; };
+		18B52F341E2E1A4C0030EACF /* EmojiTextAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiTextAttachment.h; sourceTree = "<group>"; };
+		18B52F351E2E1A4C0030EACF /* EmojiTextAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojiTextAttachment.m; sourceTree = "<group>"; };
+		18B52F3C1E2E1A530030EACF /* ChatEmojiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatEmojiView.h; sourceTree = "<group>"; };
+		18B52F3D1E2E1A530030EACF /* ChatEmojiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatEmojiView.m; sourceTree = "<group>"; };
+		18B52F3E1E2E1A530030EACF /* EmojiButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiButton.h; sourceTree = "<group>"; };
+		18B52F3F1E2E1A530030EACF /* EmojiButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojiButton.m; sourceTree = "<group>"; };
+		18B52F401E2E1A530030EACF /* EmojiScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiScrollView.h; sourceTree = "<group>"; };
+		18B52F411E2E1A530030EACF /* EmojiScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojiScrollView.m; sourceTree = "<group>"; };
+		18B52F421E2E1A530030EACF /* IconButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconButton.h; sourceTree = "<group>"; };
+		18B52F431E2E1A530030EACF /* IconButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconButton.m; sourceTree = "<group>"; };
+		18B52F481E2E1ACF0030EACF /* Define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
+		18B52F4A1E2E1B040030EACF /* UIImage+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Category.h"; sourceTree = "<group>"; };
+		18B52F4B1E2E1B040030EACF /* UIImage+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
+		18B52F4C1E2E1B040030EACF /* UIView+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Category.h"; sourceTree = "<group>"; };
+		18B52F4D1E2E1B040030EACF /* UIView+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Category.m"; sourceTree = "<group>"; };
+		18B52F501E2E1BEC0030EACF /* ChatInputTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatInputTextView.h; sourceTree = "<group>"; };
+		18B52F511E2E1BEC0030EACF /* ChatInputTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatInputTextView.m; sourceTree = "<group>"; };
+		18B52F531E2E1C2E0030EACF /* Emoji.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Emoji.plist; sourceTree = "<group>"; };
 		18E674BD1E25DD6600D05922 /* TranscribeVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TranscribeVoiceView.m; sourceTree = "<group>"; };
 		18E674BE1E25DD6600D05922 /* TranscribeVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TranscribeVoiceView.h; sourceTree = "<group>"; };
 		44ED9DEA97187237AABE2553 /* Pods-XMPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMPP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XMPP/Pods-XMPP.debug.xcconfig"; sourceTree = "<group>"; };
@@ -546,6 +588,7 @@
 		181D69441E1C9199006837EF /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				18B52F491E2E1B040030EACF /* category */,
 				1870E06F1E1E4590001B1AFC /* Singleton */,
 				181D698D1E1CFE80006837EF /* XMPPFramework */,
 				181D69631E1C93B7006837EF /*  CustomView */,
@@ -713,6 +756,7 @@
 		181D69611E1C92C7006837EF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				18B52F2B1E2E1A4C0030EACF /* EmojiModel */,
 				18A39A0A1E24E90300D95012 /* TBChatContentModel.h */,
 				18A39A0B1E24E90300D95012 /* TBChatContentModel.m */,
 			);
@@ -722,12 +766,17 @@
 		181D69621E1C92C7006837EF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				18B52F3B1E2E1A530030EACF /* EmojiVIew */,
+				18B52F501E2E1BEC0030EACF /* ChatInputTextView.h */,
+				18B52F511E2E1BEC0030EACF /* ChatInputTextView.m */,
 				18E674BD1E25DD6600D05922 /* TranscribeVoiceView.m */,
 				18E674BE1E25DD6600D05922 /* TranscribeVoiceView.h */,
 				18A39A011E24C25400D95012 /* TBInPutView.h */,
 				18A39A021E24C25400D95012 /* TBInPutView.m */,
 				18A39A0D1E24EBDD00D95012 /* TBChatCell.h */,
 				18A39A0E1E24EBDD00D95012 /* TBChatCell.m */,
+				18B52F281E2DE9D30030EACF /* TBChatKeyBoardAnimationView.h */,
+				18B52F291E2DE9D30030EACF /* TBChatKeyBoardAnimationView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1564,11 +1613,56 @@
 				189DCE031E1B566C006974A4 /* Main.storyboard */,
 				189DCE081E1B566C006974A4 /* LaunchScreen.storyboard */,
 				189DCE0B1E1B566C006974A4 /* Info.plist */,
+				18B52F531E2E1C2E0030EACF /* Emoji.plist */,
+				18B52F481E2E1ACF0030EACF /* Define.h */,
 				189DCDFB1E1B566C006974A4 /* main.m */,
 				181D69711E1C9A72006837EF /* macro.h */,
 				188554D91E1BBAC30026F3FB /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18B52F2B1E2E1A4C0030EACF /* EmojiModel */ = {
+			isa = PBXGroup;
+			children = (
+				18B52F2C1E2E1A4C0030EACF /* ChatEmojiIcons.h */,
+				18B52F2D1E2E1A4C0030EACF /* ChatEmojiIcons.m */,
+				18B52F2E1E2E1A4C0030EACF /* CommentEmoji.h */,
+				18B52F2F1E2E1A4C0030EACF /* CommentEmoji.m */,
+				18B52F301E2E1A4C0030EACF /* EmojiConvertToString.h */,
+				18B52F311E2E1A4C0030EACF /* EmojiConvertToString.m */,
+				18B52F321E2E1A4C0030EACF /* EmojiObj.h */,
+				18B52F331E2E1A4C0030EACF /* EmojiObj.m */,
+				18B52F341E2E1A4C0030EACF /* EmojiTextAttachment.h */,
+				18B52F351E2E1A4C0030EACF /* EmojiTextAttachment.m */,
+			);
+			path = EmojiModel;
+			sourceTree = "<group>";
+		};
+		18B52F3B1E2E1A530030EACF /* EmojiVIew */ = {
+			isa = PBXGroup;
+			children = (
+				18B52F3C1E2E1A530030EACF /* ChatEmojiView.h */,
+				18B52F3D1E2E1A530030EACF /* ChatEmojiView.m */,
+				18B52F3E1E2E1A530030EACF /* EmojiButton.h */,
+				18B52F3F1E2E1A530030EACF /* EmojiButton.m */,
+				18B52F401E2E1A530030EACF /* EmojiScrollView.h */,
+				18B52F411E2E1A530030EACF /* EmojiScrollView.m */,
+				18B52F421E2E1A530030EACF /* IconButton.h */,
+				18B52F431E2E1A530030EACF /* IconButton.m */,
+			);
+			path = EmojiVIew;
+			sourceTree = "<group>";
+		};
+		18B52F491E2E1B040030EACF /* category */ = {
+			isa = PBXGroup;
+			children = (
+				18B52F4A1E2E1B040030EACF /* UIImage+Category.h */,
+				18B52F4B1E2E1B040030EACF /* UIImage+Category.m */,
+				18B52F4C1E2E1B040030EACF /* UIView+Category.h */,
+				18B52F4D1E2E1B040030EACF /* UIView+Category.m */,
+			);
+			path = category;
 			sourceTree = "<group>";
 		};
 		2E2DDFA8E568E3BBFB81324A /* Frameworks */ = {
@@ -1655,6 +1749,7 @@
 				181D6B4B1E1CFE81006837EF /* build-libidn.sh in Resources */,
 				189DCE071E1B566C006974A4 /* Assets.xcassets in Resources */,
 				181D6AD91E1CFE80006837EF /* copying.txt in Resources */,
+				18B52F541E2E1C2E0030EACF /* Emoji.plist in Resources */,
 				189DCE051E1B566C006974A4 /* Main.storyboard in Resources */,
 				181D6B461E1CFE81006837EF /* README.txt in Resources */,
 			);
@@ -1719,6 +1814,7 @@
 				181D6AFB1E1CFE80006837EF /* XMPPRoomHybrid.xcdatamodeld in Sources */,
 				181D6AE11E1CFE80006837EF /* XMPPStream.m in Sources */,
 				181D6AE91E1CFE80006837EF /* XMPPRoster.xcdatamodel in Sources */,
+				18B52F3A1E2E1A4C0030EACF /* EmojiTextAttachment.m in Sources */,
 				181D6ADC1E1CFE80006837EF /* XMPPJID.m in Sources */,
 				181D6B301E1CFE80006837EF /* XMPPTime.m in Sources */,
 				189DCE021E1B566C006974A4 /* ViewController.m in Sources */,
@@ -1736,6 +1832,7 @@
 				181D696C1E1C93B7006837EF /* TTBBTabbarController.m in Sources */,
 				181D6B381E1CFE80006837EF /* DDList.m in Sources */,
 				181D6AFA1E1CFE80006837EF /* XMPPRoomOccupantCoreDataStorageObject.m in Sources */,
+				18B52F4F1E2E1B040030EACF /* UIView+Category.m in Sources */,
 				181D6AF91E1CFE80006837EF /* XMPPRoomMessageCoreDataStorageObject.m in Sources */,
 				181D6B0F1E1CFE80006837EF /* XMPPvCardTempLabel.m in Sources */,
 				181D6B241E1CFE80006837EF /* XMPPMessageArchiving_Contact_CoreDataObject.m in Sources */,
@@ -1758,6 +1855,7 @@
 				181D6AFF1E1CFE80006837EF /* XMPPRoomMemoryStorage.m in Sources */,
 				18A39A0F1E24EBDD00D95012 /* TBChatCell.m in Sources */,
 				181D6B311E1CFE80006837EF /* NSXMLElement+XEP_0203.m in Sources */,
+				18B52F471E2E1A530030EACF /* IconButton.m in Sources */,
 				181D6ADF1E1CFE80006837EF /* XMPPParser.m in Sources */,
 				181D6AE51E1CFE80006837EF /* XMPPProcessOne.m in Sources */,
 				181D69861E1C9ECB006837EF /* TBRegisterViewController.m in Sources */,
@@ -1773,17 +1871,20 @@
 				181D69511E1C91A2006837EF /* fileCacheManager.m in Sources */,
 				181D6AE31E1CFE80006837EF /* XMPPCoreDataStorage.m in Sources */,
 				181D6B451E1CFE81006837EF /* DispatchQueueLogFormatter.m in Sources */,
+				18B52F4E1E2E1B040030EACF /* UIImage+Category.m in Sources */,
 				189DCDFF1E1B566C006974A4 /* AppDelegate.m in Sources */,
 				180E838C1E1F932F00AB049B /* TBContactModel.m in Sources */,
 				18A39A061E24D00F00D95012 /* BaseViewController.m in Sources */,
 				181D6B421E1CFE81006837EF /* DDLog.m in Sources */,
 				181D6B371E1CFE80006837EF /* README.markdown in Sources */,
 				181D6B021E1CFE80006837EF /* XMPPMessage+XEP0045.m in Sources */,
+				18B52F381E2E1A4C0030EACF /* EmojiConvertToString.m in Sources */,
 				181D6AED1E1CFE80006837EF /* XMPPRosterMemoryStorage.m in Sources */,
 				181D69801E1C9E9E006837EF /* TBChatViewController.m in Sources */,
 				181D6AF31E1CFE80006837EF /* XMPPJabberRPCModule.m in Sources */,
 				181D6B271E1CFE80006837EF /* XMPPMessageArchiving.m in Sources */,
 				181D6AD51E1CFE80006837EF /* XMPPXFacebookPlatformAuthentication.m in Sources */,
+				18B52F441E2E1A530030EACF /* ChatEmojiView.m in Sources */,
 				181D6B131E1CFE80006837EF /* XMPPResultSet.m in Sources */,
 				181D6AD71E1CFE80006837EF /* NSNumber+XMPP.m in Sources */,
 				181D697D1E1C9E6B006837EF /* TBDisconverViewController.m in Sources */,
@@ -1791,6 +1892,7 @@
 				181D6B4A1E1CFE81006837EF /* DDXMLNode.m in Sources */,
 				18308C091E23489A000DF47B /* TBAddContactController.m in Sources */,
 				181D6AFD1E1CFE80006837EF /* XMPPRoomMessageHybridCoreDataStorageObject.m in Sources */,
+				18B52F461E2E1A530030EACF /* EmojiScrollView.m in Sources */,
 				181D6B351E1CFE80006837EF /* NSXMLElement+XEP_0297.m in Sources */,
 				181D6B431E1CFE81006837EF /* DDTTYLogger.m in Sources */,
 				181D6B481E1CFE81006837EF /* DDXMLDocument.m in Sources */,
@@ -1800,13 +1902,16 @@
 				181D696A1E1C93B7006837EF /* SXHeadLine.m in Sources */,
 				181D6B1C1E1CFE80006837EF /* XMPPTransports.m in Sources */,
 				181D6B1F1E1CFE80006837EF /* XMPPCapabilitiesCoreDataStorage.m in Sources */,
+				18B52F371E2E1A4C0030EACF /* CommentEmoji.m in Sources */,
 				181D69521E1C91A2006837EF /* UserInfoManager.m in Sources */,
 				181D6AE81E1CFE80006837EF /* XMPPResourceCoreDataStorageObject.m in Sources */,
 				181D6B201E1CFE80006837EF /* XMPPCapsCoreDataStorageObject.m in Sources */,
 				181D6AF61E1CFE80006837EF /* XMPPPrivacy.m in Sources */,
 				181D6B3D1E1CFE81006837EF /* XMPPStringPrep.m in Sources */,
 				181D6B3B1E1CFE80006837EF /* XMPPIDTracker.m in Sources */,
+				18B52F361E2E1A4C0030EACF /* ChatEmojiIcons.m in Sources */,
 				181D6AF81E1CFE80006837EF /* XMPPRoomCoreDataStorage.m in Sources */,
+				18B52F521E2E1BEC0030EACF /* ChatInputTextView.m in Sources */,
 				189DCDFC1E1B566C006974A4 /* main.m in Sources */,
 				181D6B261E1CFE80006837EF /* XMPPMessageArchivingCoreDataStorage.m in Sources */,
 				181D6B151E1CFE80006837EF /* XMPPPubSub.m in Sources */,
@@ -1814,14 +1919,17 @@
 				181D6B401E1CFE81006837EF /* DDASLLogger.m in Sources */,
 				181D6B321E1CFE80006837EF /* XEP_0223.m in Sources */,
 				181D6B071E1CFE80006837EF /* XMPPvCardCoreDataStorage.m in Sources */,
+				18B52F451E2E1A530030EACF /* EmojiButton.m in Sources */,
 				18A39A031E24C25400D95012 /* TBInPutView.m in Sources */,
 				181D698C1E1CF1F5006837EF /* SDLaunchWebViewController.m in Sources */,
 				181D697A1E1C9E5A006837EF /* TBContactViewController.m in Sources */,
+				18B52F391E2E1A4C0030EACF /* EmojiObj.m in Sources */,
 				181D69501E1C91A2006837EF /* popTableview.m in Sources */,
 				181D6AF71E1CFE80006837EF /* XMPPRoom.xcdatamodeld in Sources */,
 				181D69771E1C9E47006837EF /* TBMyViewController.m in Sources */,
 				181D6ADD1E1CFE80006837EF /* XMPPMessage.m in Sources */,
 				181D6AD41E1CFE80006837EF /* XMPPPlainAuthentication.m in Sources */,
+				18B52F2A1E2DE9D30030EACF /* TBChatKeyBoardAnimationView.m in Sources */,
 				181D6AE61E1CFE80006837EF /* XMPPReconnect.m in Sources */,
 				181D6B0B1E1CFE80006837EF /* XMPPvCardTempAdr.m in Sources */,
 				181D6B441E1CFE81006837EF /* ContextFilterLogFormatter.m in Sources */,
