@@ -91,7 +91,7 @@
 -(void)setKeyboardHide{
     
     
-  //  [self.inPutView tapAction];
+    [self.inPutView tapAction];
 }
 
 

@@ -170,10 +170,7 @@
     }
     
     
-    [UIView animateWithDuration:0.25 animations:^{
-      
-        self.frame = fram;
-    }];
+    [self duration:0.25 EndF:fram];
 }
 
 
