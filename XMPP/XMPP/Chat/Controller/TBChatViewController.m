@@ -23,6 +23,7 @@
 @property(nonatomic,strong)UITableView *chatTable;//聊天界面
 @property(nonatomic,strong)NSMutableArray *chatDataArray;//聊天记录数组
 
+
 // 录音机
 @property (nonatomic, strong)AVAudioRecorder *audioRecorder;
 // 音频播放器
@@ -464,7 +465,7 @@
 {
     if (!_inPutView) {
         
-        _inPutView = [[TBInPutView alloc]initWithFrame:CGRectMake(0, KSCREEN_HEIGHT-50, KSCREEN_WIDTH, 50)];
+        _inPutView = [[TBInPutView alloc]initWithFrame:CGRectMake(0, KSCREEN_HEIGHT-50, KSCREEN_WIDTH, kScreenHeight)];
         _inPutView.inputTextView.delegate = self;
         _inPutView.delegate = self;
         

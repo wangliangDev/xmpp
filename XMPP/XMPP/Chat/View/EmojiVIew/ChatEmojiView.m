@@ -88,10 +88,6 @@
     [common addTarget:self action:@selector(common:) forControlEvents:UIControlEventTouchUpInside];
     [bottom addSubview:common];
     //panda
-//    IconButton * panda = [[IconButton alloc]initWithFrame:CGRectMake(ChatEmojiView_Bottom_W, 0, ChatEmojiView_Bottom_W, ChatEmojiView_Bottom_H)];
-//    [panda setImage:[UIImage imageNamed:@"emo_1_smile"] forState:UIControlStateNormal];
-//    [panda addTarget:self action:@selector(panda:) forControlEvents:UIControlEventTouchUpInside];
-//    [bottom addSubview:panda];
     
     UIView * line = [[UIView alloc]initWithFrame:CGRectMake(0, 0, bottom.bounds.size.width, 0.5)];
     line.backgroundColor = [UIColor grayColor];
@@ -112,12 +108,13 @@
 }
 
 - (void)addEmojisWithType:(ChatEmojiViewIconType)type{
+    
     switch (type) {
         case ChatEmojiViewIconTypeCommon:
             [self common:_iconS[type]];
             break;
         case ChatEmojiViewIconTypeOther:
-//            [self panda:_iconS[type]];
+
             break;
         default:
             break;
@@ -129,13 +126,10 @@
     [self addEmjioWith:[CommentEmoji class]];
 }
 
-//-(void)panda:(IconButton*)sender{
-//    [self sender:sender];
-//    [self addEmjioWith:[PandaEmoji class]];
-//}
 
 - (void)sender:(IconButton*)sender{
     if (sender) {
+        
         if(selectIcon) selectIcon.backgroundColor = [UIColor clearColor];
         selectIcon = sender;
         selectIcon.backgroundColor = kAppLineColor;
@@ -160,8 +154,7 @@
             
             [button addTarget:self action:@selector(selectorThisIcon:) forControlEvents:UIControlEventTouchUpInside];
             [scroll addSubview:button];
-//            UILongPressGestureRecognizer * loTap = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(loTaoAction:)];
-//            [button addGestureRecognizer:loTap];
+
         }
         EmojiButton * del_B = [[EmojiButton alloc]initWithFrame:CGRectMake(EmojiView_Border+(count_lins-1)*(space+EmojiIMG_Width_Hight)+(i*kScreenWidth), EmojiView_Border+(EmojiIMG_Lines-1)*(EmojiIMG_Space_UP+EmojiIMG_Width_Hight), EmojiIMG_Width_Hight, EmojiIMG_Width_Hight)];
         del_B.emojiIcon = [array lastObject];
